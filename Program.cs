@@ -4,6 +4,11 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(SplitString.Solution("abracadabra"));
+        int[] result = AddElementsToArray.Solution([6, 6]);
+
+        foreach (int i in result)
+        {
+            Console.Write(i + ", ");
+        }
     }
 }
