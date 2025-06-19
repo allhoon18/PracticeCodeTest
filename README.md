@@ -7,6 +7,7 @@
 | Programmers| 같은 숫자는 싫어                             | Level 0 | C#        | [링크](https://velog.io/@allhoon_718/C-%EC%9B%90%ED%95%98%EB%8A%94-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%B0%BE%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181878)             |
 | Programmers| 크기가 작은 부분 문자열                       | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%9B%90%ED%95%98%EB%8A%94-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%B0%BE%EA%B8%B0-ekw8zgqr) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/147355)|
 | Programmers| 문자열 나누기                       | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%98%EB%88%84%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/140108)|
+| Programmers| 배열의 원소만큼 추가하기 | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%B0%B0%EC%97%B4%EC%9D%98-%EC%9B%90%EC%86%8C%EB%A7%8C%ED%81%BC-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181861)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
