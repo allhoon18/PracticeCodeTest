@@ -4,7 +4,7 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        int[] result = AddElementsToArray.Solution([6, 6]);
+        int[] result = CreatArray.Solution(5, 555);
 
         foreach (int i in result)
         {
