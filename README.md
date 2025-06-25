@@ -11,6 +11,7 @@
 | Programmers| 배열 만들기 2| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%B0%B0%EC%97%B4-%EB%A7%8C%EB%93%A4%EA%B8%B02) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181921)|
 | Programmers| 신고 결과 받기 | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%8B%A0%EA%B3%A0-%EA%B2%B0%EA%B3%BC-%EB%B0%9B%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/92334)|
 | Programmers| 삼각형의 완성조건(1) | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%82%BC%EA%B0%81%ED%98%95%EC%9D%98-%EC%99%84%EC%84%B1%EC%A1%B0%EA%B1%B4-1) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120889)|
+| Programmers| x만큼 간격이 있는 n개의 숫자 | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-x%EB%A7%8C%ED%81%BC-%EA%B0%84%EA%B2%A9%EC%9D%B4-%EC%9E%88%EB%8A%94-n%EA%B0%9C%EC%9D%98-%EC%88%AB%EC%9E%90) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12954)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
