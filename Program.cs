@@ -4,7 +4,7 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        var result = WithIntervalNumbers.Solution(-4, 2);
+        var result = CarpetCounting.Solution(8, 1);
 
         foreach (var item in result)
         {
