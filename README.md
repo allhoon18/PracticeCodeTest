@@ -13,6 +13,7 @@
 | Programmers| 삼각형의 완성조건(1) | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%82%BC%EA%B0%81%ED%98%95%EC%9D%98-%EC%99%84%EC%84%B1%EC%A1%B0%EA%B1%B4-1) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120889)|
 | Programmers| x만큼 간격이 있는 n개의 숫자 | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-x%EB%A7%8C%ED%81%BC-%EA%B0%84%EA%B2%A9%EC%9D%B4-%EC%9E%88%EB%8A%94-n%EA%B0%9C%EC%9D%98-%EC%88%AB%EC%9E%90) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12954)|
 | Programmers| 카펫 | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%B9%B4%ED%8E%AB-%EC%83%89%EA%B9%94-%EC%88%AB%EC%9E%90-%EC%84%B8%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42842)|
+| Programmers| 조건 문자열 | Level 0 | C# |[링크](https://velog.io/@allhoon_718/C-%EC%A1%B0%EA%B1%B4-%EB%AC%B8%EC%9E%90%EC%97%B4) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181934?language=csharp)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
