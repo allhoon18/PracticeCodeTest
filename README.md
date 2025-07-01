@@ -18,7 +18,7 @@
 | Programmers| 문자열 반복해서 출력하기 | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%B0%98%EB%B3%B5%ED%95%B4%EC%84%9C-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181950)|
 | Programmers| 나머지가 1이 되는 수 찾기 | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%82%98%EB%A8%B8%EC%A7%80%EA%B0%80-1%EC%9D%B4-%EB%90%98%EB%8A%94-%EC%88%98-%EC%B0%BE%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/87389)|
 | Programmers| 하샤드 수 | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%95%98%EC%83%A4%EB%93%9C-%EC%88%98) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12947)|
-| Programmers| K번째 수| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%95%98%EC%83%A4%EB%93%9C-%EC%88%98) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42748?language=csharp#)|
+| Programmers| K번째 수| Level 1 | C# | [링크]([https://velog.io/@allhoon_718/C-%ED%95%98%EC%83%A4%EB%93%9C-%EC%88%98](https://velog.io/@allhoon_718/C-K%EB%B2%88%EC%A7%B8-%EC%88%98)) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42748?language=csharp#)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
