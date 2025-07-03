@@ -4,6 +4,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(OvertimeScoreCalculator.Solution(3,[1, 1]));
+        Console.WriteLine(OvertimeScoreCalculator.Solution(4,[4, 3,3]));
     }
 }

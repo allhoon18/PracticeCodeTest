@@ -17,16 +17,34 @@ public class OvertimeScoreCalculator
         
         List<int> worksList = works.ToList();
         worksList.Sort();
-
-        for (int i = 0; i < n; i++)
+        worksList.Reverse();
+        
+        int currentIndex = 0;
+        int maxIndex = 0;
+        
+        int time = n;
+        
+        while (time > 0)
         {
-            int lastIndex = worksList.Count - 1;
-            
-            worksList[lastIndex] = worksList[lastIndex] > 0 ? worksList[lastIndex]-1 : 0;
-            
-            worksList.Sort();
+            //현재 확인한 값이 최대값과 같을 경우 현재 확인한 값이 최대 값이므로 해당 값을 1 감소
+            if (worksList[currentIndex] >= worksList[maxIndex])
+            {
+                worksList[currentIndex] = worksList[currentIndex] > 0 ? worksList[currentIndex]-1 : 0;
+                time--;
+            }
+        
+            if (worksList[currentIndex] > worksList[maxIndex])
+            {
+                maxIndex = currentIndex;
+            }
+        
+            if (worksList[currentIndex] <= worksList[maxIndex])
+            {
+                currentIndex = currentIndex + 1 < worksList.Count ? currentIndex + 1 : 0;
+            }
         }
-
+        
+        
         foreach (int i in worksList)
         {
             answer += (long)Math.Pow(i, 2);
