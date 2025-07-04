@@ -22,12 +22,16 @@
 | Programmers| 대소문자 바꿔서 출력하기| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%EB%B0%94%EA%BF%94%EC%84%9C-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181949)|
 | Programmers| 바탕화면 정리| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%B0%94%ED%83%95%ED%99%94%EB%A9%B4-%EC%A0%95%EB%A6%AC) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/161990)|
 |Programmers|혼자서 하는 틱택토| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%98%BC%EC%9E%90%EC%84%9C-%ED%95%98%EB%8A%94-%ED%8B%B1%ED%83%9D%ED%86%A0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/160585)|
+|Programmers|문자 반복 출력하기| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%AC%B8%EC%9E%90-%EB%B0%98%EB%B3%B5-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120825)|
+|Programmers|콜라 문제| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%BD%9C%EB%9D%BC-%EB%AC%B8%EC%A0%9C) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/132267)|
+|Programmers|야근 지| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%95%BC%EA%B7%BC-%EC%A7%80%EC%88%98) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12927)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
 ## 🛠️ 사용 언어 및 도구
 
 *   C#
+*   JetBrains Rider
 
 ## 🙋‍♂️ About Me
 
