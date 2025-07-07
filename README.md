@@ -25,6 +25,9 @@
 |Programmers|문자 반복 출력하기| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%AC%B8%EC%9E%90-%EB%B0%98%EB%B3%B5-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120825)|
 |Programmers|콜라 문제| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%BD%9C%EB%9D%BC-%EB%AC%B8%EC%A0%9C) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/132267)|
 |Programmers|야근 지수| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%95%BC%EA%B7%BC-%EC%A7%80%EC%88%98) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12927)|
+|Programmers|약수 구하기| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%95%BD%EC%88%98-%EA%B5%AC%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120897)|
+|Programmers|최대공약수와 최소공배수| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80-%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98)| [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12940)|
+|Programmers|소수 찾기| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%86%8C%EC%88%98-%EC%B0%BE%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12921)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
