@@ -58,25 +58,25 @@ public class PrimeNumberFinder
         
     }
     
-    // private void LeavePrimeNumber(int n, int index, ref List<int> numbers)
-    // {
-    //
-    //     int checkNumber = numbers[index];
-    //     
-    //     if(checkNumber >= Math.Sqrt(n))
-    //         return;
-    //     
-    //     
-    //     for (var i = 2; i <= n / checkNumber; i++)
-    //     {            
-    //         if(numbers.Contains(i * checkNumber))
-    //             numbers.Remove(i * checkNumber);
-    //     }
-    //     
-    //     int nextIndex = index + 1;
-    //     
-    //     LeavePrimeNumber(n, nextIndex, ref numbers);
-    // }
+    private void LeavePrimeNumber(int n, int index, ref List<int> numbers)
+    {
+    
+        int checkNumber = numbers[index];
+        
+        if(checkNumber >= Math.Sqrt(n))
+            return;
+        
+        
+        for (var i = 2; i <= n / checkNumber; i++)
+        {            
+            if(numbers.Contains(i * checkNumber))
+                numbers.Remove(i * checkNumber);
+        }
+        
+        int nextIndex = index + 1;
+        
+        LeavePrimeNumber(n, nextIndex, ref numbers);
+    }
     
     
 }

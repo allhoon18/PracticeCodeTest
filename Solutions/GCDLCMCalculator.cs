@@ -2,7 +2,15 @@
 
 public class GCDLCMCalculator
 {
-    public static int[] solution(int n, int m) {
+    /*
+     * 두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환하는 함수,
+     * Solution을 완성해 보세요.
+     * (배열의 맨 앞에 최대공약수, 그다음 최소공배수를 넣어 반환)
+     */
+    
+    //https://school.programmers.co.kr/learn/courses/30/lessons/12940
+    
+    public static int[] Solution(int n, int m) {
         
         int smallNum = n <= m ? n : m;
         int largeNum = n >= m ? n : m;
@@ -27,7 +35,6 @@ public class GCDLCMCalculator
         }
         else
         {
-            //Console.WriteLine(largeNum / greatestCommonDivisor);
             leastCommonMultiple = ((largeNum / greatestCommonDivisor)  * (smallNum / greatestCommonDivisor)) * greatestCommonDivisor;   
         }
         
