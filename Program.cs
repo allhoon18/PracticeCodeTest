@@ -4,6 +4,11 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(OvertimeScoreCalculator.Solution(4,[4, 3,3]));
+        var arr = DivisorFinder.Solution(24);
+
+        foreach (var item in arr)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
