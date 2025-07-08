@@ -17,21 +17,21 @@ public class NSquaredArraySlice
 
     public static int[] Solution(int n, long left, long right)
     {
-        //int[] board = new int[n * n];
-        // for (int i = 0; i < n; i++)
-        // {
-        //     for (int j = 0; j < n; j++)
-        //     {
-        //         if (j <= i)
-        //         {
-        //             board[n * i + j] = i + 1;
-        //         }
-        //         else
-        //         {
-        //             board[n * i + j] = j + 1;
-        //         }
-        //     }
-        // }
+        // int[] board = new int[n * n];
+        //  for (int i = 0; i < n; i++)
+        //  {
+        //      for (int j = 0; j < n; j++)
+        //      {
+        //          if (j <= i)
+        //          {
+        //              board[n * i + j] = i + 1;
+        //          }
+        //          else
+        //          {
+        //              board[n * i + j] = j + 1;
+        //          }
+        //      }
+        //  }
 
         int[] answer = new int[right - left + 1];
 
@@ -45,13 +45,11 @@ public class NSquaredArraySlice
 
     private static int FindNumberOnBoard(int n, long index)
     {
-        // 0-based 1차원 인덱스 'index'를
-        // 1-based 2차원 행 'row'와 열 'col'로 변환합니다.
+        //행과 열을 구함
         long row = (index / n) + 1;
         long col = (index % n) + 1;
 
-        // 해당 위치의 숫자는 row와 col 중 더 큰 값입니다.
-        // Math.Max는 long을 지원하므로 long으로 계산 후 int로 캐스팅하여 반환합니다.
+        // 해당 위치의 숫자는 row와 col 중 더 큰 값
         return (int)Math.Max(row, col);
     }
 }
