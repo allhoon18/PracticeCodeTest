@@ -4,7 +4,7 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        var arr = ConditionalArrayOperation.Solution([49, 12, 100, 276, 33], 27);
+        var arr = ArraySlicer.Solution([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [7, 2, 3, 0]);
 
         foreach (var item in arr)
         {
