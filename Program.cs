@@ -4,6 +4,11 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(PrimeNumberFinder.Solution(10));
+        var arr = ConditionalArrayOperation.Solution([49, 12, 100, 276, 33], 27);
+
+        foreach (var item in arr)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
