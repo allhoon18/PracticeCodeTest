@@ -28,6 +28,9 @@
 |Programmers|약수 구하기| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%95%BD%EC%88%98-%EA%B5%AC%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120897)|
 |Programmers|최대공약수와 최소공배수| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80-%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98)| [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12940)|
 |Programmers|소수 찾기| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%86%8C%EC%88%98-%EC%B0%BE%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12921)|
+|Programmers|배열의 길이에 따라 다른 연산하기| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%B0%B0%EC%97%B4%EC%9D%98-%EA%B8%B8%EC%9D%B4%EC%97%90-%EB%94%B0%EB%9D%BC-%EB%8B%A4%EB%A5%B8-%EC%97%B0%EC%82%B0%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181854)|
+|Programmers|배열 조각하기| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%B0%B0%EC%97%B4-%EC%A1%B0%EA%B0%81%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181893)|
+|Programmers|n^2 배열 자르기| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-n2-%EB%B0%B0%EC%97%B4-%EC%9E%90%EB%A5%B4%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/87390)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
