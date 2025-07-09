@@ -15,6 +15,7 @@ public class ConditionalSequenceTransformer1
     {
         const int splitNumber = 50;
         
+        //수정 필요
         //arr = arr.Where(n => n % 2 == 0 && n >= splitNumber).Select(n => n / 2).ToArray();
         //arr = arr.Where(n => n % 2 == 1 && n < splitNumber).Select(n => n * 2).ToArray();
         
