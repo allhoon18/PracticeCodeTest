@@ -29,6 +29,10 @@ public class ConditionalSequenceTransformer3
             }
         }
         
+        //bool isOddNumber = k % 2 == 1;
+        
+        //return isOddNumber ? arr.Select(x => x * k).ToArray() : arr.Select(x => x + k).ToArray();
+        
         return arr;
     }
     
