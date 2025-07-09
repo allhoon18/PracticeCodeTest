@@ -4,7 +4,7 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        var arr = NSquaredArraySlice.Solution(3,2,5);
+        var arr = ConditionalSequenceTransformer1.Solution([1, 2, 3, 100, 99, 98]);
 
         foreach (var item in arr)
         {
