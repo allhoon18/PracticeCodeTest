@@ -5,6 +5,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(CuttingPaper.Solution(5,1));
+        Console.WriteLine(FibonacciCalculator.Solution(5));
     }
 }
