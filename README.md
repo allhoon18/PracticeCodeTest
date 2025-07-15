@@ -36,6 +36,8 @@
 |Programmers|조건에 맞게 수열 변환하기 2| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%A1%B0%EA%B1%B4%EC%97%90-%EB%A7%9E%EA%B2%8C-%EC%88%98%EC%97%B4-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0-2) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181881)|
 |Programmers|종이 자르기| Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%A2%85%EC%9D%B4-%EC%9E%90%EB%A5%B4%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120922)|
 |Programmers|피보나치 수| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%EC%88%98) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12945)|
+|Programmers|올바른 괄호| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%98%AC%EB%B0%94%EB%A5%B8-%EA%B4%84%ED%98%B8) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12909)|
+|Programmers|주식 가격| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%A3%BC%EC%8B%9D-%EA%B0%80%EA%B2%A9) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42584)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
