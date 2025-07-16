@@ -38,6 +38,7 @@
 |Programmers|피보나치 수| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%EC%88%98) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12945)|
 |Programmers|올바른 괄호| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%98%AC%EB%B0%94%EB%A5%B8-%EA%B4%84%ED%98%B8) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12909)|
 |Programmers|주식 가격| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%A3%BC%EC%8B%9D-%EA%B0%80%EA%B2%A9) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42584)|
+|Programmers|동영상 재생기| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%8F%99%EC%98%81%EC%83%81-%EC%9E%AC%EC%83%9D%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/340213)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
