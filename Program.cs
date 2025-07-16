@@ -6,6 +6,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(VideoPlayer.Solution("10:55", "00:05", "00:15", "06:55", ["prev", "next", "next"]));
+        Console.WriteLine(BridgeCrossingSimulator.Solution(100,100,[10,10,10,10,10,10,10,10,10,10]	));
     }
 }

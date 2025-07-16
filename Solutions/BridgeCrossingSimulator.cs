@@ -13,8 +13,88 @@ public class BridgeCrossingSimulator
      * 다리가 견딜 수 있는 무게 weight, 트럭 별 무게 truck_weights가 주어집니다.
      * 이때 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 return 하도록 solution 함수를 완성하세요.
      */
-    
+
     //https://school.programmers.co.kr/learn/courses/30/lessons/42583
     
+    static int totalWeight = 0;
+    static int truckCount = 0;
     
+    public static int Solution(int bridge_length, int weight, int[] truck_weights)
+    {
+        List<int> trucks = truck_weights.ToList();
+        trucks.Sort();
+        
+        Queue<int> waitingTrucks = new Queue<int>();
+        
+        foreach (int truck in trucks)
+        {
+            waitingTrucks.Enqueue(truck);
+        }
+
+        int waitingTime = 0;
+        List<Truck> trucksOnBridge = new List<Truck>();
+
+        do
+        {
+            if (waitingTrucks.Count > 0)
+            {
+                if (totalWeight + waitingTrucks.Peek() < weight && truckCount + 1 <= bridge_length)
+                {
+                    int truckWeight = waitingTrucks.Dequeue();
+                    trucksOnBridge.Add(new Truck(bridge_length, truckWeight, Exit));
+                    totalWeight += truckWeight;
+                    truckCount++;
+                }   
+            }
+
+            for (int i = 0; i < trucksOnBridge.Count; i++)
+            {
+                trucksOnBridge[i].Move();
+
+                if (trucksOnBridge[i].IsExit)
+                {
+                    trucksOnBridge.RemoveAt(i);
+                }
+            }
+            waitingTime++;
+            
+        } while (totalWeight > 0);
+        
+        return waitingTime;
+    }
+
+    private static void Exit(int weight)
+    {
+        totalWeight -= weight;
+        truckCount--;
+    }
+    
+}
+
+class Truck
+{
+    int bridgeLength;
+    int weight;
+    private Action<int> onExit;
+
+    public bool IsExit;
+
+    public Truck(int bridge_length, int weight, Action<int> onExit)
+    {
+        this.bridgeLength = bridge_length;
+        this.weight = weight;
+        this.onExit = onExit;
+    }
+
+    public void Move()
+    {
+        bridgeLength--;
+        
+        if (bridgeLength == 0)
+        {
+            onExit(weight);
+            IsExit  = true;
+        }
+
+    }
 }
