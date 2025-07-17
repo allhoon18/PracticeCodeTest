@@ -15,51 +15,50 @@ public class BridgeCrossingSimulator
      */
 
     //https://school.programmers.co.kr/learn/courses/30/lessons/42583
-    
+
     static int totalWeight = 0;
     static int truckCount = 0;
-    
+
     public static int Solution(int bridge_length, int weight, int[] truck_weights)
     {
-        List<int> trucks = truck_weights.ToList();
-        trucks.Sort();
-        
         Queue<int> waitingTrucks = new Queue<int>();
-        
-        foreach (int truck in trucks)
+
+        foreach (int truck in truck_weights)
         {
             waitingTrucks.Enqueue(truck);
         }
 
         int waitingTime = 0;
-        List<Truck> trucksOnBridge = new List<Truck>();
+        Queue<Truck> trucksOnBridge = new Queue<Truck>();
+
+        Action onMove = () => { };
 
         do
         {
-            if (waitingTrucks.Count > 0)
-            {
-                if (totalWeight + waitingTrucks.Peek() < weight && truckCount + 1 <= bridge_length)
-                {
-                    int truckWeight = waitingTrucks.Dequeue();
-                    trucksOnBridge.Add(new Truck(bridge_length, truckWeight, Exit));
-                    totalWeight += truckWeight;
-                    truckCount++;
-                }   
-            }
-
-            for (int i = 0; i < trucksOnBridge.Count; i++)
-            {
-                trucksOnBridge[i].Move();
-
-                if (trucksOnBridge[i].IsExit)
-                {
-                    trucksOnBridge.RemoveAt(i);
-                }
-            }
             waitingTime++;
-            
-        } while (totalWeight > 0);
-        
+
+            //현재 다리 위에 있는 트럭이 일괄적으로 이동
+            onMove.Invoke();
+            //트럭 중에서 다리를 벗어난 트럭은 제거
+            if (trucksOnBridge.Count > 0 && trucksOnBridge.Peek().IsExit)
+            {
+                Truck exitTruck = trucksOnBridge.Dequeue();
+                onMove -= exitTruck.Move;
+            }
+
+            if (waitingTrucks.Count > 0 && totalWeight + waitingTrucks.Peek() <= weight &&
+                truckCount + 1 <= bridge_length)
+            {
+                int truckWeight = waitingTrucks.Dequeue();
+                Truck newTruck = new Truck(bridge_length, truckWeight, Exit);
+                trucksOnBridge.Enqueue(newTruck);
+                
+                onMove += newTruck.Move;
+                totalWeight += truckWeight;
+                truckCount++;
+            }
+        } while (waitingTrucks.Count > 0 || totalWeight > 0);
+
         return waitingTime;
     }
 
@@ -68,7 +67,6 @@ public class BridgeCrossingSimulator
         totalWeight -= weight;
         truckCount--;
     }
-    
 }
 
 class Truck
@@ -76,7 +74,6 @@ class Truck
     int bridgeLength;
     int weight;
     private Action<int> onExit;
-
     public bool IsExit;
 
     public Truck(int bridge_length, int weight, Action<int> onExit)
@@ -89,12 +86,11 @@ class Truck
     public void Move()
     {
         bridgeLength--;
-        
+
         if (bridgeLength == 0)
         {
             onExit(weight);
-            IsExit  = true;
+            IsExit = true;
         }
-
     }
 }
