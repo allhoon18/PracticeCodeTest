@@ -11,18 +11,109 @@ public class TriangularSnail
 
     //https://school.programmers.co.kr/learn/courses/30/lessons/68645
 
+    enum Direction
+    {
+        Down,
+        Right,
+        Up,
+    }
+
     public static int[] Solution(int n)
     {
-        int length = 0;
+        //
+        // List<int[]> perimeterNumbers = new List<int[]>();
+        //
+        // int number = n;
+        // int index = 0;
+        // int nextStart = 1;
+        //
+        // while (number > 1)
+        // {
+        //     int perimeterLength = 3 * number - 3;
+        //
+        //     perimeterNumbers.Add(new int[perimeterLength]);
+        //
+        //     for (int i = 0; i < perimeterLength; i++)
+        //     {
+        //         perimeterNumbers[index][i] = nextStart + i;
+        //         //Console.Write(nextStart + i + ", ");
+        //     }
+        //     
+        //     index++;
+        //     number -= 3;
+        //     nextStart = perimeterLength+1;
+        //     //Console.WriteLine();
+        // }
+        //
+        // if (number == 1)
+        // {
+        //     perimeterNumbers.Add(new int[]{nextStart});
+        //     //Console.WriteLine(nextStart);
+        // }
+        //
+        
+        int totalCellSize = n * (n + 1) / 2;
 
-        for (int i = n; i > 0; i--)
+        int[] answer = new int[totalCellSize];
+        
+
+        int[][] triangle = new int[n][];
+        for (int i = 0; i < n; i++)
         {
-            length += n;
+            triangle[i] = new int[i + 1];
         }
-        
-        int[] answer = new int[length];
-        
-        
+
+        int row = -1; //현재 행
+        int col = 0; //현재 열
+        int num = 1; //이번에 칸에 넣을 숫자
+
+        Direction currentDirection = Direction.Down;
+
+        while (num <= totalCellSize)
+        {
+            currentDirection = ChooseDirection(row, col, triangle, currentDirection);
+
+            switch (currentDirection)
+            {
+                case Direction.Down:
+                    row++;
+                    break;
+                case Direction.Right:
+                    col++;
+                    break;
+                case Direction.Up:
+                    row--;
+                    col--;
+                    break;
+            }
+
+            triangle[row][col] = num;
+            
+            num++;
+        }
+
+        int idx = 0;
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < triangle[i].Length ; j++)
+            {
+                answer[idx] = triangle[i][j];
+                idx++;
+            }
+        }
+
         return answer;
+    }
+
+    private static Direction ChooseDirection(int row, int col, int[][] triangle, Direction lastDirection)
+    {
+        if (lastDirection == Direction.Up && triangle[row - 1][col - 1] == 0)
+            return Direction.Up;
+        if (row + 1 < triangle.Length && triangle[row + 1][col] == 0)
+            return Direction.Down;
+        if (col + 1 < triangle[row].Length && triangle[row][col + 1] == 0)
+            return Direction.Right;
+        else
+            return Direction.Up;
     }
 }

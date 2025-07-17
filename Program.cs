@@ -6,6 +6,11 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(BridgeCrossingSimulator.Solution(2,10,	[7,4,5,6]));
+        var arr = TriangularSnail.Solution(6);
+
+        foreach (var item in arr)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
