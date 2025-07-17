@@ -40,7 +40,7 @@
 |Programmers|주식 가격| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%A3%BC%EC%8B%9D-%EA%B0%80%EA%B2%A9) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42584)|
 |Programmers|동영상 재생기| Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%8F%99%EC%98%81%EC%83%81-%EC%9E%AC%EC%83%9D%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/340213)|
 |Programmers|다리를 지나는 트럭| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%8B%A4%EB%A6%AC%EB%A5%BC-%EC%A7%80%EB%82%98%EB%8A%94-%ED%8A%B8%EB%9F%AD) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42583)|
-|Programmers|삼각 달팽| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%82%BC%EA%B0%81-%EB%8B%AC%ED%8C%BD%EC%9D%B4) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/68645)|
+|Programmers|삼각 달팽이| Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%82%BC%EA%B0%81-%EB%8B%AC%ED%8C%BD%EC%9D%B4) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/68645)|
 | (플랫폼)| (이름)                          | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                                        | ...    | ...       | ...                                                                       | ...                                                                          |
 
