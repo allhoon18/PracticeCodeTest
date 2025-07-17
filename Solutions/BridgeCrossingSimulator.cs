@@ -29,8 +29,6 @@ public class BridgeCrossingSimulator
         }
 
         int waitingTime = 0;
-        Queue<Truck> trucksOnBridge = new Queue<Truck>();
-
         Action onMove = () => { };
 
         do
@@ -39,21 +37,12 @@ public class BridgeCrossingSimulator
 
             //현재 다리 위에 있는 트럭이 일괄적으로 이동
             onMove.Invoke();
-            //트럭 중에서 다리를 벗어난 트럭은 제거
-            if (trucksOnBridge.Count > 0 && trucksOnBridge.Peek().IsExit)
-            {
-                Truck exitTruck = trucksOnBridge.Dequeue();
-                onMove -= exitTruck.Move;
-            }
 
             if (waitingTrucks.Count > 0 && totalWeight + waitingTrucks.Peek() <= weight &&
                 truckCount + 1 <= bridge_length)
             {
                 int truckWeight = waitingTrucks.Dequeue();
-                Truck newTruck = new Truck(bridge_length, truckWeight, Exit);
-                trucksOnBridge.Enqueue(newTruck);
-                
-                onMove += newTruck.Move;
+                onMove += new Truck(bridge_length, truckWeight, Exit, onMove).Move;
                 totalWeight += truckWeight;
                 truckCount++;
             }
@@ -73,14 +62,17 @@ class Truck
 {
     int bridgeLength;
     int weight;
-    private Action<int> onExit;
+    private Action<int> _onExit;
+    private Action _onMove;
     public bool IsExit;
 
-    public Truck(int bridge_length, int weight, Action<int> onExit)
+    public Truck(int bridge_length, int weight, Action<int> onExit, Action onMove)
     {
-        this.bridgeLength = bridge_length;
+        bridgeLength = bridge_length;
         this.weight = weight;
-        this.onExit = onExit;
+        _onExit = onExit;
+        _onMove = onMove;
+        _onMove += Move;
     }
 
     public void Move()
@@ -89,8 +81,9 @@ class Truck
 
         if (bridgeLength == 0)
         {
-            onExit(weight);
+            _onExit(weight);
             IsExit = true;
+            _onMove -= Move;
         }
     }
 }

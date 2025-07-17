@@ -6,6 +6,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(BridgeCrossingSimulator.Solution(100,100,	[10,10,10,10,10,10,10,10,10,10]));
+        Console.WriteLine(BridgeCrossingSimulator.Solution(2,10,	[7,4,5,6]));
     }
 }
