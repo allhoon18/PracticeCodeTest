@@ -20,38 +20,6 @@ public class TriangularSnail
 
     public static int[] Solution(int n)
     {
-        //
-        // List<int[]> perimeterNumbers = new List<int[]>();
-        //
-        // int number = n;
-        // int index = 0;
-        // int nextStart = 1;
-        //
-        // while (number > 1)
-        // {
-        //     int perimeterLength = 3 * number - 3;
-        //
-        //     perimeterNumbers.Add(new int[perimeterLength]);
-        //
-        //     for (int i = 0; i < perimeterLength; i++)
-        //     {
-        //         perimeterNumbers[index][i] = nextStart + i;
-        //         //Console.Write(nextStart + i + ", ");
-        //     }
-        //     
-        //     index++;
-        //     number -= 3;
-        //     nextStart = perimeterLength+1;
-        //     //Console.WriteLine();
-        // }
-        //
-        // if (number == 1)
-        // {
-        //     perimeterNumbers.Add(new int[]{nextStart});
-        //     //Console.WriteLine(nextStart);
-        // }
-        //
-        
         int totalCellSize = n * (n + 1) / 2;
 
         int[] answer = new int[totalCellSize];
