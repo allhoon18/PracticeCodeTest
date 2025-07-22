@@ -48,8 +48,9 @@ public class PuzzleGameSolver
         while (lowLevel <= highLevel)
         {
             //가장 큰 숫자와 가장 작은 숫자의 평균을 레벨로 입력
-            int level = (highLevel + lowLevel) / 2;
-
+            int level = lowLevel + (highLevel - lowLevel) / 2;
+            //int level = (int)Math.Abs((highLevel + lowLevel) / 2f) ;
+            
             bool isInLimit = Check(level);
 
             if (isInLimit)
@@ -61,9 +62,6 @@ public class PuzzleGameSolver
             {
                 lowLevel = level + 1;
             }
-
-            if (level == 0)
-                return 1;
         }
 
         return resultLevel;
