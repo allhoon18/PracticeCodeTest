@@ -22,13 +22,13 @@ public class CollisionChecker
     //https://school.programmers.co.kr/learn/courses/30/lessons/340211
 
     private static int arriveCount = 0;
+    private static int collsionCount = 0;
     private static List<Robot> robots = new List<Robot>();
+    private static Dictionary<Tuple<int,int>, int> map = new Dictionary<Tuple<int,int>, int>();
     private static Action onMove = () => { };
 
     public static int Solution(int[,] points, int[,] routes)
     {
-        int collsionCount = 0;
-
         int robotCount = routes.GetLength(0);
 
         //이동할 로봇을 생성
@@ -41,48 +41,19 @@ public class CollisionChecker
                 robotRoute[j] = routes[i, j];
             }
 
-            Robot tempRobot = new Robot(i, points, robotRoute, Arrive);
+            Robot tempRobot = new Robot(i, points, robotRoute, Arrive, map);
             onMove += tempRobot.Move;
             robots.Add(tempRobot);
         }
-
-        List<Tuple<int, int>> checkedPoints = new List<Tuple<int, int>>();
-        //최초 시작 지점에서의 충돌 확인
-        for (int i = 0; i < robots.Count; i++)
-        {
-            for (int j = i + 1; j < robots.Count; j++)
-            {
-                if (robots[i].CheckCollision(robots[j].CurrentPos) && !checkedPoints.Contains(robots[j].CurrentPos))
-                {
-                    collsionCount++;
-                    checkedPoints.Add(robots[j].CurrentPos);
-                    //Console.WriteLine("collision : "  + robots[j].CurrentPos.Item1 + " ," + robots[j].CurrentPos.Item2);
-                }
-            }
-        }
+        
+        CheckRobotCollision();
 
         while (arriveCount < robotCount)
         {
-            checkedPoints.Clear();
-            
             //로봇 이동 처리
             onMove.Invoke();
 
-            //Console.WriteLine("Collision Check");
-
-            for (int i = 0; i < robots.Count; i++)
-            {
-                for (int j = i + 1; j < robots.Count; j++)
-                {
-                    //이번 이동 후 해당 타일에서의 충돌 보고 이력이 없다면 충돌 카운트를 추가
-                    if (robots[i].CheckCollision(robots[j].CurrentPos) && !checkedPoints.Contains(robots[j].CurrentPos))
-                    {
-                        collsionCount++;
-                        checkedPoints.Add(robots[j].CurrentPos);
-                        //Console.WriteLine("collision : "  + robots[j].CurrentPos.Item1 + " ," + robots[j].CurrentPos.Item2);
-                    }
-                }
-            }
+            CheckRobotCollision();
         }
 
         return collsionCount;
@@ -92,7 +63,17 @@ public class CollisionChecker
     {
         arriveCount++;
         onMove -= robots[index].Move;
-        //robots.RemoveAt(index);
+    }
+
+    private static void CheckRobotCollision()
+    {
+        foreach (var count in map.Values)
+        {
+            if (count > 1)
+            {
+                collsionCount++;
+            }
+        }
     }
 }
 
@@ -106,11 +87,13 @@ class Robot
 
     private bool _isArrived = false;
 
+    private static Dictionary<Tuple<int, int>, int> _map;
+
     public Tuple<int, int> CurrentPos { get; private set; }
 
     private Action<int> _onArrived;
 
-    public Robot(int index, int[,] points, int[] routes, Action<int> onArrived)
+    public Robot(int index, int[,] points, int[] routes, Action<int> onArrived, Dictionary<Tuple<int, int>, int> map)
     {
         _index = index;
         _points = points;
@@ -118,6 +101,16 @@ class Robot
         CurrentPos = new Tuple<int, int>(points[routes[_routeIndex] - 1, 0], points[routes[_routeIndex] - 1, 1]);
         SetNextPos();
         _onArrived = onArrived;
+        _map = map;
+        
+        if (_map.ContainsKey(CurrentPos))
+        {
+            _map[CurrentPos]++;
+        }
+        else
+        {
+            _map.Add(CurrentPos, 1);
+        }
     }
 
     private void SetNextPos()
@@ -126,6 +119,12 @@ class Robot
 
         if (_routeIndex == _routes.Length)
         {
+            //마지막 지점에 도착한 것이므로 맵에서 제거
+            if (_map.ContainsKey(CurrentPos))
+            {
+                _map[CurrentPos]--;
+            }
+            
             _isArrived = true;
             _onArrived.Invoke(_index);
             return;
@@ -136,13 +135,13 @@ class Robot
 
     public void Move()
     {
-        //Console.WriteLine(_index + " move");
-
-        if (CurrentPos.Equals(_nextPos))
+        //기존에 있던 위치에서 벗어났으므로 제거
+        if (_map.ContainsKey(CurrentPos))
         {
-            SetNextPos();
+            _map[CurrentPos]--;
         }
-
+        
+        //r값을 먼저 이동
         if (CurrentPos.Item1 != _nextPos.Item1)
         {
             if (CurrentPos.Item1 < _nextPos.Item1)
@@ -150,6 +149,7 @@ class Robot
             else
                 CurrentPos = new Tuple<int, int>(CurrentPos.Item1 - 1, CurrentPos.Item2);
         }
+        //r값이 맞춰진 후 c 값을 이동
         else if (CurrentPos.Item2 != _nextPos.Item2)
         {
             if (CurrentPos.Item2 < _nextPos.Item2)
@@ -157,13 +157,23 @@ class Robot
             else
                 CurrentPos = new Tuple<int, int>(CurrentPos.Item1, CurrentPos.Item2 - 1);
         }
-    }
-
-    public bool CheckCollision(Tuple<int, int> target)
-    {
-        if (_isArrived)
-            return false;
-
-        return CurrentPos.Equals(target);
+        
+        
+        //새로운 위치에 위치했다는 것을 map에 전달
+        if (_map.ContainsKey(CurrentPos))
+        {
+            _map[CurrentPos]++;
+        }
+        else
+        {
+            _map.Add(CurrentPos, 1);
+        }
+        
+        //목적지에 도착했다면 다음 목적지를 탐색
+        if (CurrentPos.Equals(_nextPos))
+        {
+            SetNextPos();
+        }
+        
     }
 }
