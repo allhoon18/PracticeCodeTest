@@ -26,55 +26,75 @@ public class PuzzleGameSolver
      */
 
     //https://school.programmers.co.kr/learn/courses/30/lessons/340212
+    
+    static int[] _diffs; // static으로 선언하여 SolvePuzzle 및 Check에서 직접 접근
+    static int[] _times;
+    static long _limit;
+    static int _puzzleCount;
 
     public static int Solution(int[] diffs, int[] times, long limit)
     {
-        long sumOfTimes;
-        int puzzleCount = diffs.Length;
-        List<int> levels = diffs.ToList();
-        levels.Sort();
-        
-        int lastSuccessLevelIndex = levels.Count - 1;
-        int firstFailLevelIndex = 0;
-        
-        int startLevel = levels[lastSuccessLevelIndex];
-        
-        int prevTime = 0;
-        bool isInLimit = false;
+        _diffs = diffs;
+        _times = times;
+        _limit = limit;
+        _puzzleCount = diffs.Length;
 
-        do
+        const int maxvalue = 100000;
+        
+        int highLevel = maxvalue;
+        int lowLevel = 0;
+        int resultLevel = 0;
+
+        while (lowLevel <= highLevel)
         {
-            sumOfTimes = 0;
-            startLevel = levels[lastSuccessLevelIndex];
-            
-            for (int i = 0; i < puzzleCount; i++)
-            {
-                sumOfTimes += SolvePuzzle(startLevel, diffs[i], times[i], prevTime);
-                prevTime = times[i];
-            }
-            
-            isInLimit = prevTime <= limit;
-            //문제의 난이도를 정렬
-            //난이도 중에서 최초로 실패하는 구간을 찾기
-            //실패하는 구간을 반으로 나눠 해당 값으로 시간 측정
-            //실패한다면 해당 값과 마지막 성공 값 사이의 반을 나눠 해당 연산 반복
-            //성공한다면 해당 값과 최초 실패 값 사이 반을 나눠 해당 연산 반복
+            //가장 큰 숫자와 가장 작은 숫자의 평균을 레벨로 입력
+            int level = (highLevel + lowLevel) / 2;
 
-        } while (isInLimit);
-        
-        return startLevel + 1;
+            bool isInLimit = Check(level);
+
+            if (isInLimit)
+            {
+                resultLevel = level;
+                highLevel = level - 1;
+            }
+            else
+            {
+                lowLevel = level + 1;
+            }
+
+            if (level == 0)
+                return 1;
+        }
+
+        return resultLevel;
+    }
+    
+    private static bool Check(int level)
+    {
+        long totalTime = 0;
+        long prevTime = 0; // SolvePuzzle 함수에서 필요
+
+        for (int i = 0; i < _puzzleCount; i++)
+        {
+            totalTime += SolvePuzzle(level, _diffs[i], _times[i], prevTime);
+            // 총 시간이 limit을 초과하면 더 이상 계산할 필요 없음 (성능 최적화)
+            if (totalTime > _limit) 
+            {
+                return false;
+            }
+            prevTime = _times[i];
+        }
+        return totalTime <= _limit;
     }
 
     private static long SolvePuzzle(int level, int diff, int time, long prevTime)
     {
-        long solveTime = 0;
-
         if (diff <= level)
         {
             return time;
         }
 
-        solveTime += (diff - level) * (prevTime + time) + time;
+        long solveTime = (diff - level) * (prevTime + time) + time;
         
         return solveTime;
     }
