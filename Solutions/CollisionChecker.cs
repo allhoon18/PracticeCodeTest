@@ -83,14 +83,12 @@ class Robot
     private int[,] _points;
     private int[] _routes;
     private int _routeIndex = 0;
+    private Tuple<int, int> _currentPos;
     private Tuple<int, int> _nextPos;
 
     private bool _isArrived = false;
 
     private static Dictionary<Tuple<int, int>, int> _map;
-
-    public Tuple<int, int> CurrentPos { get; private set; }
-
     private Action<int> _onArrived;
 
     public Robot(int index, int[,] points, int[] routes, Action<int> onArrived, Dictionary<Tuple<int, int>, int> map)
@@ -98,18 +96,18 @@ class Robot
         _index = index;
         _points = points;
         _routes = routes;
-        CurrentPos = new Tuple<int, int>(points[routes[_routeIndex] - 1, 0], points[routes[_routeIndex] - 1, 1]);
+        _currentPos = new Tuple<int, int>(points[routes[_routeIndex] - 1, 0], points[routes[_routeIndex] - 1, 1]);
         SetNextPos();
         _onArrived = onArrived;
         _map = map;
         
-        if (_map.ContainsKey(CurrentPos))
+        if (_map.ContainsKey(_currentPos))
         {
-            _map[CurrentPos]++;
+            _map[_currentPos]++;
         }
         else
         {
-            _map.Add(CurrentPos, 1);
+            _map.Add(_currentPos, 1);
         }
     }
 
@@ -117,16 +115,24 @@ class Robot
     {
         _routeIndex++;
 
-        if (_routeIndex == _routes.Length)
+        if (_routeIndex >= _routes.Length)
         {
-            //마지막 지점에 도착한 것이므로 맵에서 제거
-            if (_map.ContainsKey(CurrentPos))
+            if (!_isArrived)
             {
-                _map[CurrentPos]--;
+                _isArrived = true;
+                return;
             }
-            
-            _isArrived = true;
-            _onArrived.Invoke(_index);
+
+            if (_isArrived)
+            {
+                _onArrived.Invoke(_index);
+                
+                if (_map.ContainsKey(_currentPos))
+                {
+                    _map[_currentPos]--;
+                }
+            }
+                
             return;
         }
 
@@ -136,41 +142,41 @@ class Robot
     public void Move()
     {
         //기존에 있던 위치에서 벗어났으므로 제거
-        if (_map.ContainsKey(CurrentPos))
+        if (_map.ContainsKey(_currentPos))
         {
-            _map[CurrentPos]--;
+            _map[_currentPos]--;
         }
         
         //r값을 먼저 이동
-        if (CurrentPos.Item1 != _nextPos.Item1)
+        if (_currentPos.Item1 != _nextPos.Item1)
         {
-            if (CurrentPos.Item1 < _nextPos.Item1)
-                CurrentPos = new Tuple<int, int>(CurrentPos.Item1 + 1, CurrentPos.Item2);
+            if (_currentPos.Item1 < _nextPos.Item1)
+                _currentPos = new Tuple<int, int>(_currentPos.Item1 + 1, _currentPos.Item2);
             else
-                CurrentPos = new Tuple<int, int>(CurrentPos.Item1 - 1, CurrentPos.Item2);
+                _currentPos = new Tuple<int, int>(_currentPos.Item1 - 1, _currentPos.Item2);
         }
         //r값이 맞춰진 후 c 값을 이동
-        else if (CurrentPos.Item2 != _nextPos.Item2)
+        else if (_currentPos.Item2 != _nextPos.Item2)
         {
-            if (CurrentPos.Item2 < _nextPos.Item2)
-                CurrentPos = new Tuple<int, int>(CurrentPos.Item1, CurrentPos.Item2 + 1);
+            if (_currentPos.Item2 < _nextPos.Item2)
+                _currentPos = new Tuple<int, int>(_currentPos.Item1, _currentPos.Item2 + 1);
             else
-                CurrentPos = new Tuple<int, int>(CurrentPos.Item1, CurrentPos.Item2 - 1);
+                _currentPos = new Tuple<int, int>(_currentPos.Item1, _currentPos.Item2 - 1);
         }
         
         
         //새로운 위치에 위치했다는 것을 map에 전달
-        if (_map.ContainsKey(CurrentPos))
+        if (_map.ContainsKey(_currentPos))
         {
-            _map[CurrentPos]++;
+            _map[_currentPos]++;
         }
         else
         {
-            _map.Add(CurrentPos, 1);
+            _map.Add(_currentPos, 1);
         }
         
         //목적지에 도착했다면 다음 목적지를 탐색
-        if (CurrentPos.Equals(_nextPos))
+        if (_currentPos.Equals(_nextPos))
         {
             SetNextPos();
         }
