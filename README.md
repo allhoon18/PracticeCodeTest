@@ -42,6 +42,7 @@
 |Programmers| 다리를 지나는 트럭         | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%8B%A4%EB%A6%AC%EB%A5%BC-%EC%A7%80%EB%82%98%EB%8A%94-%ED%8A%B8%EB%9F%AD) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42583)|
 |Programmers| 삼각 달팽이             | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%82%BC%EA%B0%81-%EB%8B%AC%ED%8C%BD%EC%9D%B4) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/68645)|
 |Programmers| 퍼즐 게임 챌린지          | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%8D%BC%EC%A6%90-%EA%B2%8C%EC%9E%84-%EC%B1%8C%EB%A6%B0%EC%A7%80) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/340212)|
+|Programmers| 충돌 위험 찾기 | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%B6%A9%EB%8F%8C-%EC%9C%84%ED%97%98-%EC%B0%BE%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/340211)|
 | (플랫폼)| (이름)               | (난이도) | (언어) | [링크]() | [링크]()|
 | ...              | ...                | ...    | ...       | ...                                                                       | ...                                                                          |
 
