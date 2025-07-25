@@ -6,8 +6,11 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(CollisionChecker.Solution
-        (new[,] { { 3, 2 }, { 6, 4 }, { 4, 7 }, { 1, 4 } },
-            new int[,] { { 4, 2 }, { 1, 3 }, { 4,2 }, {4,3} }));
+        var arr = CustomProximitySorter.Solution([10000,20,36,47,40,6,10,7000], 30);
+
+        foreach (var item in arr)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
