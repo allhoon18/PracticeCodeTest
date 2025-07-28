@@ -6,11 +6,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        var arr = CustomStringSorter.Solution(["abce", "abcd", "cdx"], 2);
-
-        foreach (var item in arr)
-        {
-            Console.WriteLine(item);
-        }
+        Console.WriteLine(LargestNumberComposer.Solution([3, 30, 34, 5, 9]));
     }
 }
