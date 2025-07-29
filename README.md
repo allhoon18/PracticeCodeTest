@@ -44,7 +44,7 @@
 |Programmers| 퍼즐 게임 챌린지          | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%8D%BC%EC%A6%90-%EA%B2%8C%EC%9E%84-%EC%B1%8C%EB%A6%B0%EC%A7%80) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/340212)|
 |Programmers| 충돌 위험 찾기           | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%B6%A9%EB%8F%8C-%EC%9C%84%ED%97%98-%EC%B0%BE%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/340211)|
 |Programmers| 특이한 정렬             | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%8A%B9%EC%9D%B4%ED%95%9C-%EC%A0%95%EB%A0%AC) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120880)|
-|Programmers| 문자열 내 마음대로 정렬하기           | Level 1 | [링크](https://velog.io/@allhoon_718/C-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4-%EB%A7%88%EC%9D%8C%EB%8C%80%EB%A1%9C-%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12915)|
+|Programmers| 문자열 내 마음대로 정렬하기           | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4-%EB%A7%88%EC%9D%8C%EB%8C%80%EB%A1%9C-%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12915)|
 |Programmers| 가장 큰 수             | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EA%B0%80%EC%9E%A5-%ED%81%B0-%EC%88%98) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42746)|
 | (플랫폼)| (이름)               | (난이도)   | (언어) | [링크]() | [링크]()|
 | ...              | ...                | ...     | ...       | ...                                                                       | ...                                                                          |
