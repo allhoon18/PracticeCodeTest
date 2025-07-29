@@ -6,6 +6,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(LargestNumberComposer.Solution([3, 30, 34, 5, 9]));
+        Console.WriteLine(LargestNumberComposer2.Solution([3, 30, 34, 5, 9]));
     }
 }
