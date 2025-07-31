@@ -47,6 +47,8 @@
 |Programmers| 문자열 내 마음대로 정렬하기    | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4-%EB%A7%88%EC%9D%8C%EB%8C%80%EB%A1%9C-%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12915)|
 |Programmers| 가장 큰 수             | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EA%B0%80%EC%9E%A5-%ED%81%B0-%EC%88%98) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42746)|
 |Programmers| 없는 숫자 더하기          | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%97%86%EB%8A%94-%EC%88%AB%EC%9E%90-%EB%8D%94%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/86051)|
+|Programmers| 더 크게 합치기           | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%8D%94-%ED%81%AC%EA%B2%8C-%ED%95%A9%EC%B9%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/181939?language=csharp)|
+|Programmers| 다항식 더하기            | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%8B%A4%ED%95%AD%EC%8B%9D-%EB%8D%94%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120863)|
 | (플랫폼)| (이름)               | (난이도)   | (언어) | [링크]() | [링크]()|
 | ...              | ...                | ...     | ...       | ...                                                                       | ...                                                                          |
 
