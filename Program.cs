@@ -6,6 +6,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(ConcatenatedMax.Solution(9,91));
+        Console.WriteLine(PolynomialAdder.Solution("x + x + x"));
     }
 }
