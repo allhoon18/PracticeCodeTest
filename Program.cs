@@ -6,6 +6,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(MissingNumberSum.Solution([1,2,3,4,6,7,8,0]));
+        Console.WriteLine(ConcatenatedMax.Solution(9,91));
     }
 }
