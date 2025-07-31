@@ -16,8 +16,10 @@ public class ConcatenatedMax
 
     public static int Solution(int a, int b)
     {
-        int ab = int.Parse(a.ToString() + b.ToString());
-        int ba = int.Parse(b.ToString() + a.ToString());
+        //int ab = int.Parse(a.ToString() + b.ToString());
+        //int ba = int.Parse(b.ToString() + a.ToString());
+        int ab = int.Parse($"{a}{b}");
+        int ba = int.Parse($"{b}{a}");
         return ab >=  ba ? ab : ba;
     }
 }

@@ -20,6 +20,9 @@ public class PolynomialAdder
 
     public static string Solution(string polynomial)
     {
+        _xCoefficient = 0;
+        _constant = 0;
+        
         var terms = polynomial.Split(PLUS);
 
         foreach (var term in terms)
