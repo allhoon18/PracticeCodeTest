@@ -6,6 +6,11 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(PolynomialAdder.Solution("x + x + x"));
+        var arr = MathProdigyFinder.Solution([1,3,2,4,2]);
+
+        foreach (var item in arr)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
