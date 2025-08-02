@@ -18,27 +18,29 @@ public class MathProdigyFinder
 
     public static int[] Solution(int[] answers)
     {
-        var scores = new List<(int id, int score)>
-        {
-            (1, SolveProblem([1, 2, 3, 4, 5], answers)),
-            (2, SolveProblem([2, 1, 2, 3, 2, 4, 2, 5], answers)),
-            (3, SolveProblem([3, 3, 1, 1, 2, 2, 4, 4, 5, 5], answers))
-        };
+        int[] pattern1 = new int[] { 1, 2, 3, 4, 5};
+        int[] pattern2 = new int[] { 2, 1, 2, 3, 2, 4, 2, 5};
+        int[] pattern3 = new int[] { 3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
         
-        // 4. 최대 점수 찾기
-        int maxScore = scores.Max(s => s.score);
+        var scores = new List<Tuple<int, int>>()
+        {
+            new Tuple<int, int>(1, SolveProblem(pattern1, answers)),
+            new Tuple<int, int>(2, SolveProblem(pattern2, answers)),
+            new Tuple<int, int>(3, SolveProblem(pattern3, answers))
+        };
 
-        // 5. 최대 점수를 받은 수포자 필터링 및 오름차순 정렬하여 결과 반환
-        return scores.Where(s => s.score == maxScore) // 최고 점수와 같은 수포자들만 선택
-            .OrderBy(s => s.id)             // ID를 기준으로 오름차순 정렬
-            .Select(s => s.id)              // ID만 추출
-            .ToArray();                     // 배열로 변환
+        int maxScore = scores.Max(s => s.Item2);
+
+        return scores.Where(s => s.Item2 == maxScore) // 최고 점수와 같은 수포자들만 선택
+            .OrderBy(s => s.Item1) // ID를 기준으로 오름차순 정렬
+            .Select(s => s.Item1) // ID만 추출
+            .ToArray(); // 배열로 변환
     }
 
     private static int SolveProblem(int[] method, int[] answers)
     {
         int count = 0;
-        
+
         for (int i = 0; i < answers.Length; i++)
         {
             if (answers[i] == method[i % method.Length])
