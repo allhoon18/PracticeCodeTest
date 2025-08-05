@@ -1,6 +1,4 @@
-﻿using System.IO.Pipes;
-
-namespace PracticeCodeTest.Solutions.Section2;
+﻿namespace PracticeCodeTest.Solutions.Section2;
 
 public class PrimeNumberGenerator
 {
