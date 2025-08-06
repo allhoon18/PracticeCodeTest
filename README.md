@@ -56,6 +56,7 @@
 |Programmers| 모의고사               | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42840)|
 |Programmers| 모음사전               | Level 2 | C# |[링크](https://velog.io/@allhoon_718/C-%EB%AA%A8%EC%9D%8C%EC%82%AC%EC%A0%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/84512)|
 |Programmers| 소수 찾기              | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%86%8C%EC%88%98-%EC%B0%BE%EA%B8%B02) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42839)|
+|Programmers| 369게임              | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-369-%EA%B2%8C%EC%9E%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120891)|
 | (플랫폼)| (이름)               | (난이도)   | (언어) | [링크]() | [링크]()|
 | ...              | ...                | ...     | ...       | ...                                                                       | ...                                                                          |
 
