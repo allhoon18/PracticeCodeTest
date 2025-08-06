@@ -7,6 +7,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(PrimeNumberGenerator.Solution("011"));
+        Console.WriteLine(Clap369Counter.Solution(29423));
     }
 }
