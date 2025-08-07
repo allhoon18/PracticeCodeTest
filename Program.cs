@@ -7,6 +7,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Clap369Counter.Solution(29423));
+        Console.WriteLine(DefenseGameSolver.Solution(7,3,		[4, 2, 4, 5, 3, 3, 1]));
     }
 }
