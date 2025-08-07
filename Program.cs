@@ -7,6 +7,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(DefenseGameSolver.Solution(7,3,		[4, 2, 4, 5, 3, 3, 1]));
+        Console.WriteLine(NumberGameSolver.Solution([2,2,2,2], 	[1,1,1,1]));
     }
 }
