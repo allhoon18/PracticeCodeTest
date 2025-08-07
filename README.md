@@ -57,6 +57,8 @@
 |Programmers| 모음사전               | Level 2 | C# |[링크](https://velog.io/@allhoon_718/C-%EB%AA%A8%EC%9D%8C%EC%82%AC%EC%A0%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/84512)|
 |Programmers| 소수 찾기              | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%86%8C%EC%88%98-%EC%B0%BE%EA%B8%B02) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/42839)|
 |Programmers| 369게임              | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-369-%EA%B2%8C%EC%9E%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120891)|
+|Programmers| 디펜스 게임             | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%94%94%ED%8E%9C%EC%8A%A4-%EA%B2%8C%EC%9E%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/142085)|
+|Programmers| 숫자 게임              | Level 3 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%88%AB%EC%9E%90-%EA%B2%8C%EC%9E%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12987)|
 | (플랫폼)| (이름)               | (난이도)   | (언어) | [링크]() | [링크]()|
 | ...              | ...                | ...     | ...       | ...                                                                       | ...                                                                          |
 
