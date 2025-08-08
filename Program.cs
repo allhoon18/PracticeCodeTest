@@ -7,8 +7,8 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        var arr = new int[,] {{60, 50}, {30, 70}, {60, 30}, {80, 40}};
+        var arr = new int[,] {{80,20}, {50,40}, {30,10}};
         
-        Console.WriteLine(MinimumBoundingBox.Solution(arr));
+        Console.WriteLine(DungeonExplorationOptimizer.Solution(80,arr));
     }
 }
