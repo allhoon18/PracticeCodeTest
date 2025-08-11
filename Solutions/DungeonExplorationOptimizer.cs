@@ -21,28 +21,46 @@ public class DungeonExplorationOptimizer
 
     //https://school.programmers.co.kr/learn/courses/30/lessons/87946
 
+    private static int _maxExploreCount = 0;
+    private static int _dungeonLength = 0;
+    private static Dungeon[]  _dungeons;
+
     public static int Solution(int k, int[,] dungeons)
     {
-        int length = dungeons.GetLength(0);
-        int[][] orders = new int[][CalculateFactorial(length)];
-        
-        
-        
-        
-        
-        return 0;
-    }
-
-    private static int CalculateFactorial(int n)
-    {
-        int answer = 0;
-        
-        for (int i = 1; i <= n; i++)
+        _dungeonLength = dungeons.GetLength(0);
+        _dungeons = new Dungeon[_dungeonLength];
+        for (int i = 0; i < dungeons.GetLength(0); i++)
         {
-            answer += i;
+            _dungeons[i] = new Dungeon(dungeons[i, 0], dungeons[i, 1]);
         }
         
-        return answer;
+        ExploreDungeon(k,0);
+        
+        return _maxExploreCount;
+    }
+
+    private static void ExploreDungeon(int currentFatigue, int exploreCount)
+    {
+        // 현재 경로에서 탐험한 던전 수가 이전에 찾은 최대값보다 크면 업데이트
+        if(exploreCount > _maxExploreCount)
+        {
+            _maxExploreCount = exploreCount;
+        }
+
+        // 모든 던전에 대해 탐험 시도
+        for (int i = 0; i < _dungeonLength; i++)
+        {
+            Dungeon d = _dungeons[i];
+            
+            if (!d.IsVisited && currentFatigue >= d.RequiredFatigue)
+            {
+                d.IsVisited = true; 
+                
+                ExploreDungeon(currentFatigue - d.ConsumedFatigue, exploreCount + 1);
+                
+                d.IsVisited = false; 
+            }
+        }
     }
 
     public static int Solution2(int k, int[,] dungeons)
@@ -97,13 +115,14 @@ public class DungeonExplorationOptimizer
 
 class Dungeon
 {
-    public int RequiredFatigue;
-    public int ConsumedFatigue;
+    public readonly int RequiredFatigue;
+    public readonly int ConsumedFatigue;
     public int Priority;
+    public bool IsVisited = false;
 
     public Dungeon(int requiredFatigue, int consumedFatigue)
     {
-        this.RequiredFatigue = requiredFatigue;
-        this.ConsumedFatigue = consumedFatigue;
+        RequiredFatigue = requiredFatigue;
+        ConsumedFatigue = consumedFatigue;
     }
 }
