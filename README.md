@@ -60,6 +60,7 @@
 |Programmers| 디펜스 게임             | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%94%94%ED%8E%9C%EC%8A%A4-%EA%B2%8C%EC%9E%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/142085)|
 |Programmers| 숫자 게임              | Level 3 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%88%AB%EC%9E%90-%EA%B2%8C%EC%9E%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/12987)|
 |Programmers| 최소직사각형             | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%B5%9C%EC%86%8C%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/86491)|
+|Programmers| 피로도                | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%94%BC%EB%A1%9C%EB%8F%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/87946)|
 | (플랫폼)| (이름)               | (난이도)   | (언어) | [링크]() | [링크]()|
 | ...              | ...                | ...     | ...       | ...                                                                       | ...                                                                          |
 
