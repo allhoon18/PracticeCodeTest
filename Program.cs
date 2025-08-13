@@ -7,8 +7,19 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        var arr = new int[,] {{80,20}, {50,40}, {30,10}};
+        string[,] tickets = new string[,] 
+            {
+                { "ICN", "JFK" }, 
+                { "HND", "IAD" }, 
+                { "JFK", "HND" }, 
+                
+            };
         
-        Console.WriteLine(DungeonExplorationOptimizer.Solution(80,arr));
+        var arr = TravelCourseSelector.Solution(tickets);
+
+        foreach (var item in arr)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
