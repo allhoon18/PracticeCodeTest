@@ -9,10 +9,11 @@ public class MainClass
     {
         string[,] tickets = new string[,] 
             {
-                { "ICN", "JFK" }, 
-                { "HND", "IAD" }, 
-                { "JFK", "HND" }, 
-                
+                { "ICN", "SFO" }, 
+                { "ICN", "ATL" }, 
+                { "SFO", "ATL" }, 
+                { "ATL", "ICN" }, 
+                { "ATL","SFO" }
             };
         
         var arr = TravelCourseSelector.Solution(tickets);
