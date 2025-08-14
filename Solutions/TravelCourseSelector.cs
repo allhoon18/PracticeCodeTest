@@ -68,8 +68,8 @@ public class TravelCourseSelector
             else
                 return true;
         }
-        
-        return true;
+
+        return false;
     }
 }
 
