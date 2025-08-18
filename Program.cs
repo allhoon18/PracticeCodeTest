@@ -7,20 +7,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        string[,] tickets = new string[,] 
-            {
-                { "ICN", "SFO" }, 
-                { "ICN", "ATL" }, 
-                { "SFO", "ATL" }, 
-                { "ATL", "ICN" }, 
-                { "ATL","SFO" }
-            };
-        
-        var arr = TravelCourseSelector.Solution(tickets);
-
-        foreach (var item in arr)
-        {
-            Console.WriteLine(item);
-        }
+        Console.WriteLine(ModeFinder.Solution([1, 2, 3, 3, 3, 4,4,4,4]));
     }
 }
