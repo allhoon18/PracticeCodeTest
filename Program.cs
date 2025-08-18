@@ -7,6 +7,11 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(ModeFinder.Solution([1, 2, 3, 3, 3, 4,4,4,4]));
+        var arr = RaceRankManager.Solution(["mumu", "soe", "poe", "kai", "mine"], ["kai", "kai", "mine", "mine"]);
+        
+        foreach (var item in arr)
+            {
+            Console.WriteLine(item);
+            }
     }
 }
