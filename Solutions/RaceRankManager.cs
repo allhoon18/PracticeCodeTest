@@ -17,30 +17,23 @@ public class RaceRankManager
 
     public static string[] Solution(string[] players, string[] callings)
     {
-        Dictionary<string, Runner> runners = new Dictionary<string, Runner>();
-
-        Runner? prevRunner = null;
-
+        Dictionary<string, Runner> runnersName = new Dictionary<string, Runner>();
+        Dictionary<int, Runner> runnersRank = new Dictionary<int, Runner>();
+        
         for (int i = 0; i < players.Length; i++)
         {
-            Runner newRunner = new Runner(i, players[i], prevRunner);
-            runners.Add(players[i], newRunner);
-
-            if (i > 0)
-            {
-                prevRunner.SetRunnerBehind(newRunner);
-            }
-            
-            prevRunner = newRunner;
-                
+            Runner newRunner = new Runner(i, players[i], runnersRank);
+            runnersName.Add(players[i], newRunner);
+            runnersRank.Add(i, newRunner);
         }
 
         foreach (var runnerName in callings)
         {
-            runners[runnerName].SwapPositions();
+            runnersName[runnerName].SwapPositions();
         }
         
-        string[] answer = runners.Values.OrderBy(r => r.Rank).Select(r => r.Name).ToArray();
+        string[] answer = runnersName.Values.OrderBy(r => r.Rank)
+            .Select(r => r.Name).ToArray();
         return answer;
     }
 }
@@ -49,38 +42,22 @@ class Runner
 {
     public int Rank;
     public readonly string Name;
-    public Runner? RunnerAhead;
-    public Runner? RunnerBehind;
+    private readonly Dictionary<int, Runner> _runnersRank;
 
-    public Runner(int rank, string name, Runner? runnerAhead)
+    public Runner(int rank, string name, Dictionary<int, Runner> runnersRank)
     {
         Rank = rank;
         Name = name;
-        RunnerAhead = runnerAhead;
-    }
-
-    public void SetRunnerBehind(Runner? runner)
-    {
-        RunnerBehind = runner;
+        _runnersRank = runnersRank;
     }
 
     public void SwapPositions()
     {
-        //자신의 랭크를 자신의 앞에 있던 주자의 랭크와 교체
-        int tempRank = Rank;
-        Rank = RunnerAhead.Rank;
-        RunnerAhead.Rank = tempRank;
-        
-        //tempRunner = 원래 내 앞에 있던 주자
-        Runner secondRunnerAhead = RunnerAhead.RunnerAhead;
-        //원래 내 앞에 있던 주자의 앞에는 내가 있음
-        RunnerAhead.RunnerAhead = this;
-        //바로 뒤에 있던 주자의 앞에는 기존에 내 앞에 있던 주자가 위치
-        if (RunnerBehind != null) 
-            RunnerBehind.RunnerAhead = RunnerAhead;
-        //원래 내 앞에 있던 주자가 내 바로 뒤에 있게 됨
-        RunnerBehind = RunnerAhead;
-        //앞에 앞에 있던 주자로 앞에 있는 주자를 갱신
-        RunnerAhead = secondRunnerAhead;
+        int rankAhead = Rank - 1;
+        Runner runnerAhead = _runnersRank[rankAhead];
+        _runnersRank[rankAhead] = this;
+        _runnersRank[Rank] = runnerAhead;
+        Rank--;
+        runnerAhead.Rank++;
     }
 }
