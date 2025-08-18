@@ -62,6 +62,8 @@
 |Programmers| 최소직사각형             | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%B5%9C%EC%86%8C%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/86491)|
 |Programmers| 피로도                | Level 2 | C# | [링크](https://velog.io/@allhoon_718/C-%ED%94%BC%EB%A1%9C%EB%8F%84) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/87946)|
 |Programmers| 여행경로               | Level 3 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%97%AC%ED%96%89%EA%B2%BD%EB%A1%9C) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/43164)|
+|Programmers| 최빈값 구하기            | Level 0 | C# | [링크](https://velog.io/@allhoon_718/C-%EC%B5%9C%EB%B9%88%EA%B0%92-%EA%B5%AC%ED%95%98%EA%B8%B0) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/120812?language=csharp)|
+|Programmers| 달리기 경주             | Level 1 | C# | [링크](https://velog.io/@allhoon_718/C-%EB%8B%AC%EB%A6%AC%EA%B8%B0-%EA%B2%BD%EC%A3%BC) | [링크](https://school.programmers.co.kr/learn/courses/30/lessons/178871?language=csharp)|
 | (플랫폼)| (이름)               | (난이도)   | (언어) | [링크]() | [링크]()|
 | ...              | ...                | ...     | ...       | ...                                                                       | ...                                                                          |
 
