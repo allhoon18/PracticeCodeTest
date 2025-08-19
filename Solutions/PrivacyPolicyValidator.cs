@@ -72,14 +72,13 @@ public class PrivacyPolicyValidator
 
 class Term
 {
-    private const int SUM_OF_MONTH = 28;
     public int Limit;
 
     public int LimitRange
     {
         get
         {
-            return Limit * SUM_OF_MONTH - 1;
+            return Limit * Privacy.SUM_OF_MONTH - 1;
         }
     }
 
@@ -91,15 +90,15 @@ class Term
 
 class Privacy
 {
-    private const int SUM_OF_YEAR = 336;
-    private const int SUM_OF_MONTH = 28;
+    public const int SUM_OF_YEAR = 336;
+    public const int SUM_OF_MONTH = 28;
 
     public int Index;
     
     public int Year;
     public int Month;
     public int Day;
-
+    
     private Term term;
     public bool IsInLimit = true;
 
