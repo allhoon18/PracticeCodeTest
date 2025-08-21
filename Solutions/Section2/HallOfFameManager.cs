@@ -21,26 +21,24 @@ public class HallOfFameManager
     public static int[] Solution(int k, int[] score)
     {
         List<int> scores = new List<int>();
-        Stack<int> minScores = new Stack<int>();
+        int[] minScores = new int[score.Length];
 
         for (int i = 0; i < score.Length; i++)
         {
             scores.Add(score[i]);
             
-            scores.Sort();
-            scores.Reverse();
+            scores.OrderDescending();
             
             if (i < k-1)
             {
-                minScores.Push(scores[i]);
+                minScores[i] = scores[i];
             }
             else
             {
-                minScores.Push(scores[k-1]);
+                minScores[i] = scores[k];
             }
         }
         
-        var answer = minScores.ToArray();
-        return answer.Reverse().ToArray();
+        return minScores;
     }
 }
