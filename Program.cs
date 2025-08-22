@@ -3,11 +3,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        var arr = FeatureDeploymentManager.Solution([93, 30, 55], [1, 30, 5]);
-
-        foreach (var item in arr)
-        {
-            Console.WriteLine(item);
-        }
+        Console.WriteLine(ProcessScheduler.Solution([1, 1, 9, 1, 1, 1]	,0));
     }
 }
