@@ -3,6 +3,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(ProcessScheduler.Solution([1, 1, 9, 1, 1, 1]	,0));
+        Console.WriteLine(BatteryOptimizer.Solution(5000));
     }
 }
