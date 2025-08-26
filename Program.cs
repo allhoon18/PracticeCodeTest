@@ -3,6 +3,6 @@ public class MainClass
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(BatteryOptimizer.Solution(5000));
+        Console.WriteLine(SkillTreeValidator.Solution("CBD", 	["BACDE", "CBADF", "AECB", "BDA"]));
     }
 }
