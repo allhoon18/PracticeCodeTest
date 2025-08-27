@@ -17,62 +17,54 @@ public class MissileInterceptor
 
     public static int Solution(int[,] targets)
     {
-        Dictionary<int, List<Missile>> missiles = new Dictionary<int, List<Missile>>();
+        List<Missile> missiles = new List<Missile>();
 
         for (int i = 0; i < targets.GetLength(0); i++)
         {
             Missile newMissile = new Missile(targets[i, 0], targets[i, 1]);
-
-            for (int pos = targets[i, 0]; pos < targets[i, 1]; pos++)
-            {
-                if(!missiles.ContainsKey(pos))
-                    missiles.Add(pos,new List<Missile>(){newMissile});
-                else
-                    missiles[pos].Add(newMissile);
-            }
+            missiles.Add(newMissile);
         }
         
-        int missileCount = 0;
-        int interceptCount = 0;
+        int tryCount = 0;
 
-        while (interceptCount < targets.GetLength(0))
+        missiles = missiles.OrderBy(m => m.End).ThenBy(m => m.Start).ToList();
+        
+        int lastShootPoint = int.MinValue;
+
+        foreach (var missile in missiles)
         {
-            int position = missiles
-                .OrderByDescending(m => m.Value.Count)
-                .Select(m => m.Key)
-                .ToArray()[0];
-            
-            interceptCount += missiles[position].Count;
-
-            foreach (var missile in missiles[position])
+            if (missile.Start >= lastShootPoint)
             {
-                foreach (var targetMissiles in missiles.Values)
-                {
-                    targetMissiles.Remove(missile);
-                }
+                tryCount++; // 새로운 요격기 필요
+                lastShootPoint = missile.End;
             }
-            
-            missiles.Remove(position);
-            missileCount++;
         }
-        
-        return missileCount;
+
+        return tryCount;
     }
 }
 
 class Missile
 {
-    int[] _range = new int[2];
+    public readonly int Start;
+    public readonly int End;
+    
     public bool IsIntercepted { get; set; }
 
     public Missile(int start, int end)
     {
-        _range[0] = start;
-        _range[1] = end;
+        Start = start;
+        End = end;
     }
 
-    public bool CheckRange(int position)
+    private bool CheckRange(int position)
     {
-        return _range[0] <= position && position <= _range[1];
+        return Start <= position && position < End;
+    }
+
+    public void TryIntercepted(int position)
+    {
+        if (CheckRange(position))
+            IsIntercepted = true;
     }
 }
