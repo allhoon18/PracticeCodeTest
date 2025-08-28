@@ -18,21 +18,25 @@ public class MissileInterceptor
     public static int Solution(int[,] targets)
     {
         List<Missile> missiles = new List<Missile>();
-
+        
+        //입력된 미사일 제원 초기화
         for (int i = 0; i < targets.GetLength(0); i++)
         {
             Missile newMissile = new Missile(targets[i, 0], targets[i, 1]);
             missiles.Add(newMissile);
         }
         
+        //요격 시도 횟수를 카운팅
         int tryCount = 0;
-
+        //미사일을 끝나는 지점이 빠른 순서로 정렬
         missiles = missiles.OrderBy(m => m.End).ThenBy(m => m.Start).ToList();
-        
+        //이전에 요격을 시도한 지점을 저장
         int lastShootPoint = int.MinValue;
 
         foreach (var missile in missiles)
         {
+            //현재 미사일의 시작 위치가 이전에 요격을 시도한 지점보다 크거나 같다면
+            // = 이전 요격 위치로는 현재 미사일의 구간을 커버할 수 없음
             if (missile.Start >= lastShootPoint)
             {
                 tryCount++; // 새로운 요격기 필요
@@ -48,23 +52,10 @@ class Missile
 {
     public readonly int Start;
     public readonly int End;
-    
-    public bool IsIntercepted { get; set; }
 
     public Missile(int start, int end)
     {
         Start = start;
         End = end;
-    }
-
-    private bool CheckRange(int position)
-    {
-        return Start <= position && position < End;
-    }
-
-    public void TryIntercepted(int position)
-    {
-        if (CheckRange(position))
-            IsIntercepted = true;
     }
 }
